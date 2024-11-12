@@ -4,7 +4,6 @@ import * as UsesCases from '../../core/use-cases'
 import { movieDBFetcher } from '../../config/adapters/movieDB.adapter';
 import { MovieDetail } from '../../core/entities/movie.entity';
 import { Cast } from '../../core/entities/cast.entity';
-import { AxiosAdapter } from '../../config/adapters/http/axios.adapter';
 
 const useMovie = ( movieId: number ) => {
 

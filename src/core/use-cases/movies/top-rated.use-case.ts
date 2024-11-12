@@ -7,7 +7,6 @@ import { MovieMapper } from "../../../infrastructure/mappers/movie.mapper";
 export const moviesTopRatedUseCase = async (fetcher: HttpAdapter): Promise<Movie[]> => {
   try {
     const topRated = await fetcher.get<MoviesDBMoviesResponse>('/top_rated');
-    // console.log({nowPlaying});
     return topRated.results.map( MovieMapper.fromMovieDBResultToEntity );
     
   } catch (error) {

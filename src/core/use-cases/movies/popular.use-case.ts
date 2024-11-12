@@ -17,7 +17,6 @@ export const moviesPopularUseCase = async (fetcher: HttpAdapter, options?: Optio
         page: options?.page || 1
       }
     });
-    // console.log({nowPlaying});
     return popular.results.map( MovieMapper.fromMovieDBResultToEntity );
     
   } catch (error) {

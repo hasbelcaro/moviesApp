@@ -27,7 +27,6 @@ const HorizontalCarousel = ({ movies, title, loadNextPage }: Props) => {
     if (isLoading.current) return;
 
     const { contentOffset, layoutMeasurement, contentSize } = event.nativeEvent;
-    // console.log(contentOffset, layoutMeasurement, contentSize);
 
     const isEndReached = (contentOffset.x + layoutMeasurement.width + 600) >= contentSize.width;
     if (!isEndReached) return;
